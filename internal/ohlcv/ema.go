@@ -9,7 +9,7 @@ func (p *Processor) CalculateEMA10(candles []Candle, initialEma float64) float64
 
 	// Calculate EMA for each candle using range
 	for _, candle := range candles {
-		ema = (candle.High * multiplier) + (ema * (1 - multiplier))
+		ema = (candle.Close * multiplier) + (ema * (1 - multiplier))
 	}
 
 	return ema
