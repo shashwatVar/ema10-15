@@ -125,7 +125,7 @@ var FetchMarketDataBySecurityID = func(securityID string) (*MarketData, error) {
 
 var FetchIndexConfig = func() (*Config, error) {
 	var config Config
-	query := `SELECT index_security_id, index_exchange_segment, index_instrument, option_expiry FROM ema10_15_config WHERE id = 1`
+	query := `SELECT index_security_id, index_exchange_segment, index_instrument, option_expiry FROM ema10_15_config WHERE id = 4`
 	err := db.QueryRow(query).Scan(
 		&config.IndexSecurityID,
 		&config.IndexExchangeSegment,
